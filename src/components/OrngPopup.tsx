@@ -28,7 +28,6 @@ const PERSONAS = [
   { name: "Elon Musk", description: "Bold, visionary style with tech-forward language" },
   { name: "Shakespeare", description: "Eloquent, poetic prose with classic flair" },
   { name: "Default", description: "Clean, professional communication" },
-  { name: "Custom", description: "Create your own unique writing persona" },
 ];
 
 const EMOJI_OPTIONS = ["😊", "🔥", "💡", "🎯", "✨", "🚀", "💪", "🎨", "📈", "🤝", "💎", "⚡"];
@@ -449,6 +448,21 @@ export function OrngPopup() {
                     </span>
                   </button>
                 ))}
+                
+                <div className="persona-divider" />
+                
+                <button
+                  onClick={() => {
+                    setShowCustomPersonaEditor(true);
+                    setShowPersonaDropdown(false);
+                  }}
+                  className="persona-add-btn"
+                >
+                  <div className="persona-add-icon">
+                    <Plus className="icon-xs" />
+                  </div>
+                  <span className="persona-add-text">Create Custom Persona</span>
+                </button>
               </div>
             )}
           </div>
