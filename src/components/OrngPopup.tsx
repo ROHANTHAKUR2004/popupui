@@ -350,42 +350,41 @@ export function OrngPopup() {
               <HelpCircle className="icon-sm" />
             </button>
 
-            <div
-              data-walkthrough="tone-buttons"
-              className="tone-row"
-            >
-              {visibleTones.map((tone) => (
-                <button
-                  key={tone.label}
-                  onClick={() => handleToneSelect(tone)}
-                  className={
-                    "tone-chip " +
-                    (selectedTone.label === tone.label ? "tone-chip--active" : "")
-                  }
-                >
-                  {tone.emoji} {tone.label}
-                </button>
-              ))}
+            <div className="tone-scroll" data-walkthrough="tone-buttons">
+              <div className="tone-scroll-inner">
+                {visibleTones.map((tone) => (
+                  <button
+                    key={tone.label}
+                    onClick={() => handleToneSelect(tone)}
+                    className={
+                      "tone-chip " +
+                      (selectedTone.label === tone.label ? "tone-chip--active" : "")
+                    }
+                  >
+                    {tone.emoji} {tone.label}
+                  </button>
+                ))}
 
-              <button
-                type="button"
-                onClick={() =>
-                  isPro
-                    ? setShowCustomToneEditor(true)
-                    : handleUpgradePrompt("Custom tones")
-                }
-                className={
-                  "tone-add " + (isPro ? "tone-add--pro" : "tone-add--locked")
-                }
-                title={isPro ? "Add custom tone" : "Pro feature"}
-              >
-                {isPro ? (
-                  <Plus className="icon-xs" />
-                ) : (
-                  <Lock className="icon-xs" />
-                )}
-                <span>Add</span>
-              </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    isPro
+                      ? setShowCustomToneEditor(true)
+                      : handleUpgradePrompt("Custom tones")
+                  }
+                  className={
+                    "tone-add " + (isPro ? "tone-add--pro" : "tone-add--locked")
+                  }
+                  title={isPro ? "Add custom tone" : "Pro feature"}
+                >
+                  {isPro ? (
+                    <Plus className="icon-xs" />
+                  ) : (
+                    <Lock className="icon-xs" />
+                  )}
+                  <span>Add</span>
+                </button>
+              </div>
             </div>
           </div>
 
