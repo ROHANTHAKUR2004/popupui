@@ -128,12 +128,13 @@ export function OrngPopup() {
     }
   };
 
-  const popupBorderClass =
-    borderState === "waiting"
-      ? "popup--waiting"
-      : borderState === "thinking"
-      ? "popup--thinking"
-      : "popup--completed";
+  const popupBorderClass = showUpgradePrompt
+    ? "popup--upgrade"
+    : borderState === "waiting"
+    ? "popup--waiting"
+    : borderState === "thinking"
+    ? "popup--thinking"
+    : "popup--completed";
 
   /* ---------- Custom Persona Editor ---------- */
 

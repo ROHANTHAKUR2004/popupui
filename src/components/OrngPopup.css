@@ -19,8 +19,7 @@
   overflow: hidden;
   position: relative;
   border: 1px solid var(--border);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-    "Segoe UI", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--text-main);
 }
 
@@ -34,6 +33,11 @@
 
 .popup--completed {
   box-shadow: 0 0 0 1px var(--primary);
+}
+
+.popup--upgrade {
+  box-shadow: 0 0 0 1px var(--primary);
+  min-height: 300px;
 }
 
 .popup--plain {

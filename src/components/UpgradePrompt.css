@@ -2,45 +2,39 @@
   position: absolute;
   inset: 0;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(3px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 60;
-  padding: 16px;
+  padding: 0;
 }
 
 .upgrade-card {
   position: relative;
-  max-width: 280px;
+  max-width: none;
   width: 100%;
-  border-radius: 16px;
-  border: 1px solid #e5e7eb;
-  background: #ffffff;
-  text-align: center;
-  padding: 18px 14px 12px;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
-}
-
-.upgrade-close {
-  position: absolute;
-  top: 6px;
-  right: 6px;
+  height: 100%;
+  border-radius: 0;
   border: none;
   background: transparent;
-  padding: 4px;
-  border-radius: 999px;
-  cursor: pointer;
-  color: #9ca3af;
+  text-align: center;
+  padding: 18px 14px 12px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .upgrade-icon {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
+
 .upgrade-icon-circle {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 999px;
   background: rgba(249, 115, 22, 0.08);
   display: flex;
@@ -50,32 +44,61 @@
 }
 
 .icon-md {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .upgrade-content {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .upgrade-title {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
+  color: #111827;
 }
+
 .upgrade-text {
-  font-size: 12px;
+  font-size: 14px;
   color: #6b7280;
-  line-height: 1.4;
+  line-height: 1.5;
+  max-width: 80%;
+  text-align: center;
 }
 
 .upgrade-actions {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 24px;
+  margin-top: 16px;
 }
+
+.upgrade-secondary-btn {
+  font-size: 13px;
+  color: #6b7280;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: color 0.12s;
+}
+
+.upgrade-secondary-btn:hover {
+  color: #111827;
+}
+
 .upgrade-primary-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 8px 24px;
+  font-size: 14px;
+  border-radius: 999px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
 }
