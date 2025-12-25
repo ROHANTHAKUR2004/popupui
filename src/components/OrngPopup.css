@@ -35,11 +35,6 @@
   box-shadow: 0 0 0 1px var(--primary);
 }
 
-.popup--upgrade {
-  box-shadow: 0 0 0 1px var(--primary);
-  min-height: 300px;
-}
-
 .popup--plain {
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
 }
@@ -359,12 +354,31 @@
 }
 
 .popup-body--main {
-  min-height: 140px;
+  min-height: 80px;
 }
 
 .popup-text {
-  flex: 1;
+  flex-grow: 0;
   padding: 10px 12px;
+  height: 96px;
+  overflow-y: auto;
+}
+
+.popup-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.popup-text::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.popup-text::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 999px;
+}
+
+.popup-text::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af;
 }
 
 .generated-text {

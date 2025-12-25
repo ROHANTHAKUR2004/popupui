@@ -1,4 +1,4 @@
-import { Sparkles, Crown } from "lucide-react";
+import { X, Sparkles, Crown } from "lucide-react";
 import "./UpgradePrompt.css";
 
 interface UpgradePromptProps {
@@ -19,6 +19,12 @@ export function UpgradePrompt({
   return (
     <div className="upgrade-overlay">
       <div className="upgrade-card">
+        <button
+          className="upgrade-close"
+          onClick={onClose}
+        >
+          <X className="icon-xs" />
+        </button>
 
         <div className="upgrade-icon">
           <div className="upgrade-icon-circle">
@@ -36,7 +42,7 @@ export function UpgradePrompt({
         <div className="upgrade-actions">
           <button
             onClick={onClose}
-            className="upgrade-secondary-btn"
+            className="text-btn"
           >
             Maybe later
           </button>

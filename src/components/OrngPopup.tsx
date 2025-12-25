@@ -128,13 +128,12 @@ export function OrngPopup() {
     }
   };
 
-  const popupBorderClass = showUpgradePrompt
-    ? "popup--upgrade"
-    : borderState === "waiting"
-    ? "popup--waiting"
-    : borderState === "thinking"
-    ? "popup--thinking"
-    : "popup--completed";
+  const popupBorderClass =
+    borderState === "waiting"
+      ? "popup--waiting"
+      : borderState === "thinking"
+      ? "popup--thinking"
+      : "popup--completed";
 
   /* ---------- Custom Persona Editor ---------- */
 
@@ -487,7 +486,9 @@ export function OrngPopup() {
                 I wanted to check in on the project's progress. Are there any
                 challenges or resources needed? Please let me know if there's
                 anything you need help with or if you need additional support
-                from the team.
+                 I wanted to check in on the project's progress. Are there any
+                challenges or resources needed? Please let me know if there's
+                anything you need help with or if you need additional support               
               </p>
             )}
           </div>
