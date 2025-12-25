@@ -1,0 +1,81 @@
+.upgrade-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+  padding: 16px;
+}
+
+.upgrade-card {
+  position: relative;
+  max-width: 280px;
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  text-align: center;
+  padding: 18px 14px 12px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
+}
+
+.upgrade-close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  border: none;
+  background: transparent;
+  padding: 4px;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #9ca3af;
+}
+
+.upgrade-icon {
+  margin-bottom: 8px;
+}
+.upgrade-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.icon-md {
+  width: 20px;
+  height: 20px;
+}
+
+.upgrade-content {
+  margin-bottom: 10px;
+}
+.upgrade-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.upgrade-text {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.upgrade-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.upgrade-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
